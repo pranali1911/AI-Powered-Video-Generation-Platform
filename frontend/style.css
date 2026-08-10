@@ -1,0 +1,345 @@
+/* Apply box-sizing to all elements */
+* {
+box-sizing: border-box;
+}
+
+/* Page background and global typography */
+body {
+margin: 0;
+min-height: 100vh;
+font-family: Arial, sans-serif;
+color: #ffffff;
+background:
+radial-gradient(circle at top left, #4f46e5 0%, transparent 35%),
+radial-gradient(circle at bottom right, #9333ea 0%, transparent 35%),
+linear-gradient(135deg, #020617, #111827, #1e1b4b);
+}
+
+/* Header section */
+header {
+text-align: center;
+padding: 35px 20px 25px;
+}
+
+/* Logo styling */
+.logo {
+font-size: 32px;
+font-weight: 700;
+letter-spacing: 0.5px;
+}
+
+/* Header description */
+header p {
+margin: 10px 0 0;
+color: #cbd5e1;
+font-size: 16px;
+}
+
+/* Main layout */
+main {
+width: 94%;
+max-width: 1250px;
+margin: 15px auto 50px;
+display: grid;
+grid-template-columns: minmax(0, 1fr) 360px;
+gap: 25px;
+align-items: start;
+}
+
+/* Generator card and sidebar container */
+.generator-card,
+aside {
+background: rgba(255, 255, 255, 0.09);
+border: 1px solid rgba(255, 255, 255, 0.16);
+border-radius: 22px;
+padding: 30px;
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Main heading */
+.generator-card h1 {
+margin: 0 0 8px;
+font-size: 30px;
+}
+
+/* Subtitle text */
+.subtitle {
+margin: 0 0 25px;
+color: #cbd5e1;
+}
+
+/* Form labels */
+label {
+display: block;
+margin-bottom: 8px;
+font-size: 14px;
+font-weight: 600;
+color: #f8fafc;
+}
+
+/* Input and select fields */
+textarea,
+select {
+width: 100%;
+border: 1px solid #cbd5e1;
+border-radius: 12px;
+padding: 13px 14px;
+font-size: 15px;
+font-family: inherit;
+background: rgba(255, 255, 255, 0.96);
+color: #111827;
+outline: none;
+transition: 0.2s;
+}
+
+/* Focus effect for inputs */
+textarea:focus,
+select:focus {
+border-color: #a855f7;
+box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.25);
+}
+
+/* Prompt text area */
+textarea {
+min-height: 125px;
+resize: vertical;
+margin-bottom: 20px;
+}
+
+/* Option fields grid */
+.options {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+margin-bottom: 20px;
+}
+
+/* Dropdown cursor */
+.field select {
+cursor: pointer;
+}
+
+/* Negative prompt box */
+.negative {
+min-height: 90px;
+}
+
+/* Generate button */
+#generateBtn {
+width: 100%;
+margin-top: 5px;
+padding: 15px 20px;
+border: 0;
+border-radius: 12px;
+background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+color: white;
+font-size: 17px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.25s ease;
+}
+
+/* Button hover effect */
+#generateBtn:hover {
+transform: translateY(-2px);
+box-shadow: 0 12px 30px rgba(139, 92, 246, 0.45);
+}
+
+/* Button click effect */
+#generateBtn:active {
+transform: translateY(0);
+}
+
+/* Disabled button state */
+#generateBtn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+transform: none;
+box-shadow: none;
+}
+
+/* Message display area */
+#message {
+min-height: 25px;
+margin-top: 18px;
+text-align: center;
+color: #e2e8f0;
+font-size: 14px;
+font-weight: 600;
+}
+
+/* Generated video section */
+#videoSection {
+margin-top: 20px;
+}
+
+/* Video section title */
+#videoSection h3 {
+margin-bottom: 12px;
+}
+
+/* Generated video player */
+#videoSection video {
+width: 100%;
+max-width: 750px;
+display: block;
+margin: auto;
+border-radius: 15px;
+background: #000;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Download button */
+.download-btn {
+display: block;
+width: fit-content;
+margin: 15px auto 0;
+padding: 10px 20px;
+border-radius: 9px;
+background: #22c55e;
+color: white;
+text-decoration: none;
+font-weight: 600;
+transition: 0.2s;
+}
+
+/* Download button hover */
+.download-btn:hover {
+background: #16a34a;
+transform: translateY(-1px);
+}
+
+/* History section header */
+.history-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 18px;
+}
+
+/* History title */
+.history-header h2 {
+margin: 0;
+font-size: 21px;
+}
+
+/* History badge */
+.history-header span {
+padding: 6px 12px;
+border-radius: 20px;
+background: rgba(255, 255, 255, 0.12);
+color: #dbeafe;
+font-size: 12px;
+}
+
+/* History card container */
+.history-card {
+margin-bottom: 15px;
+padding: 13px;
+border-radius: 14px;
+background: rgba(0, 0, 0, 0.20);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* History prompt text */
+.history-card p {
+margin: 8px 0 12px;
+color: #e2e8f0;
+font-size: 13px;
+line-height: 1.5;
+}
+
+/* History video preview */
+.history-card video {
+width: 100%;
+display: block;
+border-radius: 10px;
+background: #000;
+}
+
+/* History timestamp */
+.history-card small {
+display: block;
+margin-top: 10px;
+color: #94a3b8;
+font-size: 11px;
+}
+
+/* Loading state */
+.loading {
+padding: 25px 10px;
+text-align: center;
+color: #cbd5e1;
+}
+
+/* Loading spinner */
+.spinner {
+width: 35px;
+height: 35px;
+margin: 15px auto;
+border: 4px solid rgba(255, 255, 255, 0.2);
+border-top-color: #a855f7;
+border-radius: 50%;
+animation: spin 0.9s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+
+/* Error message */
+.error {
+padding: 12px;
+border-radius: 10px;
+background: rgba(239, 68, 68, 0.15);
+color: #fecaca;
+}
+
+/* Success message */
+.success {
+color: #86efac;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 950px) {
+main {
+grid-template-columns: 1fr;
+}
+
+aside {
+    order: 2;
+}
+}
+
+/* Mobile responsiveness */
+@media (max-width: 650px) {
+header {
+padding-top: 25px;
+}
+
+.logo {
+    font-size: 26px;
+}
+
+main {
+    width: 92%;
+}
+
+.generator-card,
+aside {
+    padding: 20px;
+}
+
+.options {
+    grid-template-columns: 1fr;
+}
+
+.generator-card h1 {
+    font-size: 25px;
+}
+}

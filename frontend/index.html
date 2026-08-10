@@ -1,0 +1,68 @@
+<!-- Prompt input section -->
+<label for="prompt">Enter Your Prompt Here...... </Here></label>
+<textarea id="prompt" placeholder="Describe your video prompt..."></textarea>
+
+<!-- Video generation options -->
+<div class="options">
+
+    <!-- Aspect ratio selection -->
+    <div class="field">
+        <label for="aspectRatio">Aspect Ratio</label>
+        <select id="aspectRatio">
+            <option value="16:9">16:9 Landscape</option>
+            <option value="9:16">9:16 Portrait</option>
+            <option value="1:1">1:1 Square</option>
+        </select>
+    </div>
+
+    <!-- Duration selection -->
+    <div class="field">
+        <label for="duration">Duration</label>
+        <select id="duration">
+            <option value="5">5 Seconds</option>
+            <option value="10">10 Seconds</option>
+        </select>
+    </div>
+
+    <!-- Style selection -->
+    <div class="field">
+        <label for="style">Style</label>
+        <select id="style">
+            <option value="Cinematic">🎬 Cinematic</option>
+            <option value="Realistic">📷 Realistic</option>
+            <option value="Anime">🎨 Anime</option>
+            <option value="3D">🧊 3D</option>
+        </select>
+    </div>
+
+</div>
+
+<!-- Negative prompt input -->
+<label for="negativePrompt">Negative Prompt</label>
+<textarea id="negativePrompt" class="negative" placeholder="blurry, low quality, distorted, watermark..."></textarea>
+
+<!-- Generate video button -->
+<button id="generateBtn">🚀 Generate Video</button>
+
+<!-- Status messages -->
+<div id="message"></div>
+
+<!-- Generated video display area -->
+<div id="videoSection"></div>
+</section>
+
+<!-- Sidebar for generated video history -->
+<aside>
+
+    <!-- History section header -->
+    <div class="history-header">
+        <h2>Recent Videos</h2>
+        <span>Last 5</span>
+    </div>
+
+    <!-- Video history container -->
+    <div id="historySection">
+        <div class="loading">Loading history...</div>
+    </div>
+
+</aside>
