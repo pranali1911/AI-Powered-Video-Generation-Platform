@@ -1,68 +1,102 @@
-<!-- Prompt input section -->
-<label for="prompt">Enter Your Prompt Here...... </Here></label>
-<textarea id="prompt" placeholder="Describe your video prompt..."></textarea>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Generator</title>
 
-<!-- Video generation options -->
-<div class="options">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
 
-    <!-- Aspect ratio selection -->
-    <div class="field">
-        <label for="aspectRatio">Aspect Ratio</label>
-        <select id="aspectRatio">
-            <option value="16:9">16:9 Landscape</option>
-            <option value="9:16">9:16 Portrait</option>
-            <option value="1:1">1:1 Square</option>
-        </select>
-    </div>
+<header>
+    <div class="logo">🎬 AI Video Generator</div>
+    <p>Generate AI-powered videos from text prompts</p>
+</header>
 
-    <!-- Duration selection -->
-    <div class="field">
-        <label for="duration">Duration</label>
-        <select id="duration">
-            <option value="5">5 Seconds</option>
-            <option value="10">10 Seconds</option>
-        </select>
-    </div>
+<main>
 
-    <!-- Style selection -->
-    <div class="field">
-        <label for="style">Style</label>
-        <select id="style">
-            <option value="Cinematic">🎬 Cinematic</option>
-            <option value="Realistic">📷 Realistic</option>
-            <option value="Anime">🎨 Anime</option>
-            <option value="3D">🧊 3D</option>
-        </select>
-    </div>
+    <section class="generator-card">
 
-</div>
+        <h1>Create Video</h1>
+        <p class="subtitle">
+            Enter a prompt and generate a video using AI.
+        </p>
 
-<!-- Negative prompt input -->
-<label for="negativePrompt">Negative Prompt</label>
-<textarea id="negativePrompt" class="negative" placeholder="blurry, low quality, distorted, watermark..."></textarea>
+        <!-- Prompt input section -->
+        <label for="prompt">Enter Your Prompt Here......</label>
+        <textarea id="prompt" placeholder="Describe your video prompt..."></textarea>
 
-<!-- Generate video button -->
-<button id="generateBtn">🚀 Generate Video</button>
+        <!-- Video generation options -->
+        <div class="options">
 
-<!-- Status messages -->
-<div id="message"></div>
+            <div class="field">
+                <label for="aspectRatio">Aspect Ratio</label>
+                <select id="aspectRatio">
+                    <option value="16:9">16:9 Landscape</option>
+                    <option value="9:16">9:16 Portrait</option>
+                    <option value="1:1">1:1 Square</option>
+                </select>
+            </div>
 
-<!-- Generated video display area -->
-<div id="videoSection"></div>
-</section>
+            <div class="field">
+                <label for="duration">Duration</label>
+                <select id="duration">
+                    <option value="5">5 Seconds</option>
+                    <option value="10">10 Seconds</option>
+                </select>
+            </div>
 
-<!-- Sidebar for generated video history -->
-<aside>
+            <div class="field">
+                <label for="style">Style</label>
+                <select id="style">
+                    <option value="Cinematic">🎬 Cinematic</option>
+                    <option value="Realistic">📷 Realistic</option>
+                    <option value="Anime">🎨 Anime</option>
+                    <option value="3D">🧊 3D</option>
+                </select>
+            </div>
 
-    <!-- History section header -->
-    <div class="history-header">
-        <h2>Recent Videos</h2>
-        <span>Last 5</span>
-    </div>
+        </div>
 
-    <!-- Video history container -->
-    <div id="historySection">
-        <div class="loading">Loading history...</div>
-    </div>
+        <!-- Negative prompt input -->
+        <label for="negativePrompt">Negative Prompt</label>
+        <textarea
+            id="negativePrompt"
+            class="negative"
+            placeholder="blurry, low quality, distorted, watermark...">
+        </textarea>
 
-</aside>
+        <!-- Generate video button -->
+        <button id="generateBtn">🚀 Generate Video</button>
+
+        <!-- Status messages -->
+        <div id="message"></div>
+
+        <!-- Generated video display area -->
+        <div id="videoSection"></div>
+
+    </section>
+
+    <!-- Sidebar for generated video history -->
+    <aside>
+
+        <div class="history-header">
+            <h2>Recent Videos</h2>
+            <span>Last 5</span>
+        </div>
+
+        <div id="historySection">
+            <div class="loading">Loading history...</div>
+        </div>
+
+    </aside>
+
+</main>
+
+<!-- JS File -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
