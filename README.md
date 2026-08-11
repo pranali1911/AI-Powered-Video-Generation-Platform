@@ -31,7 +31,7 @@ This project is a simple, full-stack web application that lets users type a text
 - **Negative prompts** — specify what to avoid (e.g. "blurry, low quality, distorted, watermark")
 - **Progress/loading indicator** — animated spinner with status text while a video is being generated
 
-> Not yet implemented: Login/Signup, and automatic prompt enhancement using an LLM. See [Roadmap](#-roadmap--ideas-for-improvement) below.
+
 
 ---
 
@@ -160,18 +160,6 @@ POST /generate?prompt=a dragon flying over mountains&aspect_ratio=16:9&duration=
 }
 ```
 
----
-
-## ⚠️ Error Handling
-
-| Scenario | Behavior |
-|---|---|
-| Empty prompt | Frontend blocks submission and shows "Please enter a video prompt." Backend also validates and rejects empty prompts. |
-| AI generation fails | The error message from the model/API is caught and shown to the user instead of crashing the app. |
-| Generation takes too long | A loading spinner with "This may take a few minutes" is shown while waiting. |
-
----
-
 ## 🗺️ Roadmap / Ideas for Improvement
 
 - [ ] Add request timeout handling so users get a clear message if generation hangs
@@ -198,10 +186,5 @@ POST /generate?prompt=a dragon flying over mountains&aspect_ratio=16:9&duration=
 
 ---
 
-## 📄 License
-
-This project is open source — feel free to use, modify, and share it. *(Add your preferred license, e.g. MIT.)*
-
----
 
 **Built as part of an AI Video Generation Platform assignment. Enjoy creating! 🎥✨**
